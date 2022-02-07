@@ -11,7 +11,8 @@ test_datagen = ImageDataGenerator(rescale=1./255.,)
 test_generator = test_datagen.flow_from_directory('./data/test', shuffle=False, batch_size=1, class_mode='categorical', target_size=(220, 220))
 
 # server URL
-url = 'http://sports_ball_server:8501/v1/models/img_classifier:predict'
+# url = 'http://sports_ball_server:8501/v1/models/img_classifier:predict'
+url = 'https://ca2-doaa03-ej-tf.herokuapp.com/v1/models/img_classifier:predict'
 
 
 def make_prediction(instances):
